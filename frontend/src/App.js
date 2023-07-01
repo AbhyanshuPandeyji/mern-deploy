@@ -44,7 +44,29 @@ function App() {
 */
 
 
-// now creating the github repository
+// now creating the github repository - add and commit by using the commands metioned on the site
+/*
+Creating GitHub Repository
+After adding the necessary scripts to your package.json file, the next important step is to host your code on a version control platform like GitHub.
+So, create a new repository on github.com and then follow this steps on your terminal:
+
+Add all the files to the staging area using the command git add .
+Commit the changes using the command git commit -m "initial commit"
+Add your GitHub repository as a remote using the command git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git. Make sure to replace "YOUR_USERNAME" and "YOUR_REPOSITORY_NAME" with your actual GitHub username and repository name.
+Rename master branch to main branch using git branch -M main
+Push your code to the repository using the command git push -u origin main.
+*/
+
+
+// deploy on render
+/*
+  web service
+  Name: YOUR_DESIRED_NAME
+  Runtime: Node
+  Build Command: npm run install-server
+  Start Command: npm run start-server 
+
+*/
 
 
 export default App;
