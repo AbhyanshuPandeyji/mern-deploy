@@ -9,7 +9,8 @@ function App() {
   // fetching message from backend
   useEffect(()=>{
     // usually we use the redux and axios method for single and cleaner file 
-    fetch("http://localhost:4000") // our backend port number 
+    // fetch("http://localhost:4000") // our backend port number  // this will be before the render url or the hosting url
+    fetch("https://mern-deploy-34e4.onrender.com") // this will be after the backend deploy - the url for taking data will now be from the render to backend database
     .then((res)=> res.json()) // taking in the response message send by the backend 
     .then((data)=> setMessage(data.message)) // taking that message and setting it up as the message in the app
   })
@@ -65,8 +66,41 @@ Push your code to the repository using the command git push -u origin main.
   Runtime: Node
   Build Command: npm run install-server
   Start Command: npm run start-server 
+*/
+// add environment variables 
+// create the web service 
 
+
+// frontend deploy to live process
+
+/* then copy the backend render url of it to frontend url holder/ for this app just one place -fetch  - this is important b/c in bigger apps you are not going to add the backend url of hosting site
+every where so first you will have the create an environment variable and use it all over the app - or you could define one place from where the frontend
+will hit the url like the proxy - so if you add the backend url to the proxy the app will run on the port of the backend connected url and it will be able to take the data 
+for bigger apps we will add the url in the frontend proxy 
 */
 
+// after it commit the changes 
+// then go to render again 
+
+// deploy the frontend with the required fields
+/*
+not web services but a static site -  frontend  ( can be bit confusing )
+Name: YOUR_DESIRED_NAME
+Runtime: Node
+Build Command: npm run install-client && npm run build-client // two build commands 
+Publish directory: ./client/build // to know where the file is
+*/
+
+
+
+
+
+
+
+
+
+
+
+// now you also need to add the frontend url to the backend for its working
 
 export default App;
