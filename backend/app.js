@@ -9,7 +9,9 @@ require("dotenv").config();
 
 // middle ware
 const corsOptions = {
-    origin : "http://localhost:3000" // or your frontend URI -(reactjs) - or can be the backend url with proxy in frontend
+    // origin : "http://localhost:3000" // or your frontend URI -(reactjs) - this will be your frontend url without hosting
+    origin : "https://mern-deploy-frontend-ox2a.onrender.com" // this will be your frontend url with hosting on site
+
 }
 
 app.use(express.json());
